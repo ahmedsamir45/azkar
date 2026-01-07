@@ -1,0 +1,42 @@
+@use '../styles/variables' as *; // لو عندك variables
+@use '../styles/mixins' as *;    // لو عندك mixins
+
+.home {
+  padding: 2rem;
+
+  h1 {
+    font-family: 'Cairo', sans-serif; // خط عربي جميل
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: $primary-color; // لو معرفته في variables
+  }
+
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+
+    div {
+      @include flex-center; // لو عندك mixin flex-center
+      background-color: #f0f0f0;
+      padding: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+
+      &:hover {
+        transform: translateY(-3px);
+        background-color: #e0e7ff;
+      }
+
+      a {
+        text-decoration: none;
+        color: #111;
+        font-weight: 600;
+        font-family: 'Cairo', sans-serif;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+.container{
+    @include flex-center;
+    flex-direction: column;
+    gap: 10px;
+}
