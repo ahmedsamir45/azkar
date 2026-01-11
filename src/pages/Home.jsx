@@ -2,6 +2,7 @@ import useAzkar from '../hooks/useAzkar'
 import Loading from '../components/Loading'
 import { Link } from 'react-router-dom'
 import "./Home.scss"
+
 function Home() {
   const { data, loading, error } = useAzkar()
 
